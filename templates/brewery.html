@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Featured Breweries</h1>
+<p>List of craft breweries:</p>
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead style="background-color: #f2f2f2;">
+        <tr>
+            <th>Brewery Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Type</th>
+            <th>Website</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for b in breweries %}
+        <tr>
+            <td><strong>{{ b.name }}</strong></td>
+            <td>{{ b.city }}</td>
+            <td>{{ b.state }}</td>
+            <td>{{ b.type }}</td>
+            <td><a href="{{ b.website }}" target="_blank">Visit Site</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

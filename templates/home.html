@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to BrewSite</h1>
+<p><strong>Course:</strong> ICT-362 | <strong>Project:</strong> Project 1: Flask app</p>
+<p>A web showcase of craft breweries, taprooms, and regional selections.</p>
+
+<h2>Featured Brewery Gallery</h2>
+<div style="display: flex; gap: 15px; margin-top: 15px;">
+    <img src="{{ url_for('static', filename='images/brewery1.jpg') }}" alt="Brewery 1" width="300" style="border-radius: 8px;">
+    <img src="{{ url_for('static', filename='images/brewery2.jpg') }}" alt="Brewery 2" width="300" style="border-radius: 8px;">
+    <img src="{{ url_for('static', filename='images/brewery3.jpg') }}" alt="Brewery 3" width="300" style="border-radius: 8px;">
+</div>
+{% endblock %}
